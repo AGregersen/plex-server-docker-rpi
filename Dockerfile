@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND="noninteractive" \
   PLEX_DATA_DIR=/data \
   PLEX_TRANSCODE_DIR=/transcode
 
-RUN apt-get update
+RUN sudo apt-get update
 RUN apt-get update && apt-get install -y wget
 RUN apt-get update && apt-get install -y ca-certificates
 
