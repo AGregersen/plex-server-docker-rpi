@@ -93,3 +93,17 @@ To build the images yourself clone this repository and run the following:
 ```sh
 sudo docker buildx build -t plex-dev:latest --platform linux/arm,linux/arm64 .
 ```
+
+## Using your own container image
+Using the above folders, run the following to start plex:
+
+docker run \
+  -d \
+  --name plex \
+  --net host \
+  --restart always \
+  --volume $(echo $HOME)/media/plex/config:/config \
+  --volume $(echo $HOME)/media/plex/data:/data \
+  --volume $(echo $HOME)/media/plex/transcode:/transcode \
+  plex-dev:latest
+  
