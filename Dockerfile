@@ -1,4 +1,6 @@
-FROM debian:buster-slim AS src
+#FROM debian:buster-slim AS src
+FROM debian:arm64v7 AS src
+
 
 ARG TARGETARCH
 
