@@ -1,5 +1,5 @@
 #FROM debian:buster-slim AS src
-FROM debian:bullseye AS src
+FROM debian:bookworm AS src
 
 
 ARG TARGETARCH
